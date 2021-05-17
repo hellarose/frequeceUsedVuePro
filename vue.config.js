@@ -7,8 +7,8 @@ function resolve(dir) {
 
 module.exports = {
     publicPath: './',
-    open: true,
     devServer: {
+        open: true,
         proxy: {
             '/website': {
                 target: `http://127.0.0.1:8219`,
@@ -21,7 +21,6 @@ module.exports = {
         },
     },
     configureWebpack: {
-        name: name,
         resolve: {
             alias: {
                 '@': resolve('src')
